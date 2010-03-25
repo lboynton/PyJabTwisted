@@ -84,7 +84,7 @@ class Client(object):
 	def handleMessage(self, message):
 		for el in message.elements():
 			if el.name == "body":
-				print("%s: %s" % (message["to"], el))
+				print("%s: %s" % (message["from"], el))
 
 client_jid = jid.JID(sys.argv[1])
 secret = sys.argv[2]
